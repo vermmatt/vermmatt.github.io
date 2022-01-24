@@ -1870,7 +1870,7 @@
 
   function getYoutubeID(url) {
     var videoID = '';
-    url = url.replace(/(>|<)/gi, '').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
+    url = url.replace(/<|>|&|"/g, "").split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
 
     if (url[2] !== undefined) {
       videoID = url[2].split(/[^0-9a-z_\-]/i);
